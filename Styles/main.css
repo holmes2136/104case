@@ -7,7 +7,7 @@ body{
 #content
 {
     /*background:gray;*/
-    width:100%;
+    width:70%;
     height:100%;
     padding:20px;
     position:absolute;
@@ -17,9 +17,8 @@ body{
 #save_case{
     /*background:red;*/
     float: right;
-    overflow:auto;
+    /*overflow:auto;*/
     width:29%;
-    
     /*height: 100%;*/
     /*position: absolute;*/
 }
@@ -28,7 +27,7 @@ body{
 #un_save_case
 {
     /*background: blue;*/
-    overflow:auto;
+    /*overflow:auto;*/
     width:29%;
     /*height: 100%;*/
     float: left;
