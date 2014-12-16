@@ -92,7 +92,9 @@
                 1.網頁設計製作、設計與維護。 2.本公司位於北市忠孝東路五段，提案人位於大台北東區較便利，如有必要時可配合至本公司討論。 3.大學資訊相關科系學生打工亦可。 4.有意願者請來信洽談。
             </div>
        </div>  
-
+       
+        <canvas id="line"></canvas>
+       
        <div id="save_case" > 
             <h4>已儲存案件</h4>
             
@@ -119,31 +121,59 @@
         var bloom = new BloomFilter(
             32 * 256, // number of bits to allocate.
             16        // number of hash functions.
-        ); 
-              
-       
+        );
 
-       $(".add").click(function (e) {
-           var $save_case_container = $("#save_case"),
+
+
+        $(".add").click(function (e) {
+            var $save_case_container = $("#save_case"),
                $case = $(this).parent(".blankslate").clone(),
                case_id = $case.find(".id").text();
 
-           //use bloom filter to test case is exists or not
+            //use bloom filter to test case is exists or not
 
-           if (!bloom.test(case_id)) {
-               bloom.add(case_id);
-               $save_case_container.append($case);
+            if (!bloom.test(case_id)) {
+                bloom.add(case_id);
+                $save_case_container.append($case);
+                //drawLine();
 
-           } else {
-               alert('案件已經存在');
-           }
 
-          
 
-          
+            } else {
+                alert('案件已經存在');
+            }
 
-       });
-   
+
+
+        });
+
+       function drawLine() {
+           
+           var canvas = document.querySelector("canvas");
+           var ctx = canvas.getContext('2d');
+
+           ctx.beginPath();
+           ctx.moveTo(90, 28);
+           ctx.lineTo(120, 28);
+           ctx.closePath();
+           ctx.stroke();
+
+           ctx.save();
+           ctx.translate(120, 28);
+           var ang = Math.atan2(28 -28, 120 -90) + Math.PI / 2;
+           ctx.rotate(ang);
+           ctx.moveTo(0, 0);
+           ctx.lineTo(-5, 10);
+           ctx.lineTo(5, 10);
+           ctx.closePath();
+           ctx.fill();
+           ctx.restore();
+
+       }
+
+    
+
+
    </script>
 
    
