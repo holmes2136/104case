@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="104case : Test  item  is exists or not by Bloom filter">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>104case</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/holmes2136/104case">View on GitHub</a>
+
+          <h1 id="project_title">104case</h1>
+          <h2 id="project_tagline">Test  item  is exists or not by Bloom filter</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/holmes2136/104case/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/holmes2136/104case/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="what-inspire-me" class="anchor" href="#what-inspire-me" aria-hidden="true"><span class="octicon octicon-link"></span></a>What inspire me</h3>
+
+<p>104 人力網站或 518 租屋網都會有儲存工作物件或者房屋物件的功能 , 若儲存了相同的物件 則應會提示 : 你已經儲存了相同的東西 , 不過看起來 104 似乎沒有提示..然而去檢查 user 是否已經儲存了相同的物件而再去 db 搜尋似乎不是很必要的事情 , 因此可以 在頁面初始時便把所有已儲存物件初始化到 bloom filter , 這樣子就可以很輕鬆的檢查物件 是否存在了</p>
+
+<h3>
+<a id="what-is-bloom-filter" class="anchor" href="#what-is-bloom-filter" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is bloom filter</h3>
+
+<p>Bloom filter 為判斷某一元素是否在集合中 , 而 Bloom filter 可以用比 hash 更少的空間 完成同樣的問題 , 其中元素越多，誤報率越大，但是漏報是不可能的。</p>
+
+<p>Demo Code 所使用的 bloom filter 可參考</p>
+
+<p><a href="https://github.com/jasondavies/bloomfilter.js">https://github.com/jasondavies/bloomfilter.js</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">104case maintained by <a href="https://github.com/holmes2136">holmes2136</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-50929082-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
